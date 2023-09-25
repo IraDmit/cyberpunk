@@ -52,7 +52,7 @@ header {
   top: 0;
   left: 0;
   z-index: 1;
-  width: 100vw; 
+  width: 100%; 
   .header-wrp {
     display: flex;
     justify-content: space-between;
