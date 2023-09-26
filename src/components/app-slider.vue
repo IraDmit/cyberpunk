@@ -54,21 +54,24 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+h2 {
+  margin: 0;
+}
+
 .slider-content {
-  // display: flex;
-  // justify-content: flex-end;
-  // align-items: flex-end;
   position: relative;
+  height: 100vh;
   .slider {
     width: 100%;
     height: 100%;
+    .slick-list {
+      height: 100%;
+    }
     .slick-track {
       height: 100vh;
     }
     .slide {
-      // overflow: hidden;
       img {
-        // object-fit: cover;
         max-width: 100%;
       }
     }
@@ -80,6 +83,8 @@ export default {
       bottom: 0;
       right: 0;
       background-color: #f8f200;
+      max-width: 624px;
+      width: 100%;
       -webkit-clip-path: polygon(
         7% 0,
         100% 0,
@@ -119,6 +124,7 @@ export default {
         font-style: normal;
         font-weight: 700;
         line-height: 40px;
+        margin-top: 25px;
       }
     }
   }

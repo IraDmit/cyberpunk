@@ -1,5 +1,5 @@
 <template>
-  <header >
+  <header>
     <div class="header-wrp container">
       <div class="logo">
         <img
@@ -52,7 +52,8 @@ header {
   top: 0;
   left: 0;
   z-index: 1;
-  width: 100%; 
+  width: 100%;
+  padding: 20px 0;
   .header-wrp {
     display: flex;
     justify-content: space-between;
@@ -62,6 +63,9 @@ header {
     display: flex;
     gap: 40px;
     margin-left: auto;
+    li {
+      cursor: pointer;
+    }
   }
 }
 </style>
