@@ -65,6 +65,9 @@ header {
     margin-left: auto;
     li {
       cursor: pointer;
+      img{
+        max-width: 100%;
+      }
     }
   }
 }

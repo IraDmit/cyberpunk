@@ -2,11 +2,19 @@
   <div class="section">
     <div class="container">
       <div class="leftCol">
-        <img src="../assets/images/monitor.png" alt="monitor" />
+        <img
+          src="../assets/images/monitor.png"
+          alt="monitor"
+          class="imgMonitor"
+        />
         <div class="logos">
-          <img src="../assets/images/hp-logo.svg" alt="logo" />
-          <img src="../assets/images/x-logo.svg" alt="logo" />
-          <img src="../assets/images/Cyberpunk_2077_logo 1.svg" alt="logo" />
+          <img src="../assets/images/hp-logo.svg" alt="logo" class="hp" />
+          <img src="../assets/images/x-logo.svg" alt="logo" class="x" />
+          <img
+            src="../assets/images/Cyberpunk_2077_logo 1.svg"
+            alt="logo"
+            class="mainLogo"
+          />
         </div>
       </div>
       <div class="advertisement">
@@ -49,7 +57,7 @@ export default {};
 .section {
   background-color: #f8f200;
   .container {
-    padding: 70px 0;
+    padding: 70px 30px;
     display: flex;
     gap: 32px;
     .leftCol {
@@ -57,6 +65,9 @@ export default {};
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      .imgMonitor {
+        max-width: 100%;
+      }
       .logos {
         display: flex;
         gap: 25px;
@@ -113,6 +124,26 @@ export default {};
           margin-top: 40px;
           cursor: pointer;
         }
+      }
+    }
+    @media (max-width: 1024px) {
+      .leftCol .logos {
+        flex-direction: column;
+        align-items: center;
+        max-width: 50%;
+        width: 100%;
+        .hp {
+          width: 80px;
+          height: 80px;
+        }
+        .x {
+          height: 19.183px;
+          width: 90px;
+        }
+      }
+      .advertisement{
+        max-width: 50%;
+        
       }
     }
   }

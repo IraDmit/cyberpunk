@@ -13,19 +13,19 @@
       <div class="introduce__pictures">
         <div class="leftCol">
           <img
-            src="../assets/images/pic-1.svg"
+            src="../assets/images/pic-3.png"
             alt="picture"
             class="introduce__pictures__item"
           />
           <img
-            src="../assets/images/pic-2.svg"
+            src="../assets/images/pic-2.png"
             alt="picture"
             class="introduce__pictures__item"
           />
         </div>
         <div class="rightCol">
           <img
-            src="../assets/images/pict-3.svg"
+            src="../assets/images/pic-1.png"
             alt="picture"
             class="introduce__pictures__item"
           />
@@ -70,10 +70,122 @@ export default {};
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 32px;
+    // height: 788px;
+    overflow: hidden;
     .leftCol {
       display: flex;
       flex-direction: column;
-      gap: 32px;
+      
+      img {
+        height: 196px;
+        max-width: 460px;
+        width: 100%;
+        -webkit-clip-path: polygon(
+          7% 0,
+          100% 0,
+          100% 87%,
+          93% 100%,
+          0 100%,
+          0% 60%,
+          0 13%
+        );
+        clip-path: polygon(
+          7% 0,
+          100% 0,
+          100% 87%,
+          93% 100%,
+          0 100%,
+          0% 60%,
+          0 13%
+        );
+      }
+    }
+    .rightCol {
+      height: 424px;
+      overflow: hidden;
+      -webkit-clip-path: polygon(
+        7% 0,
+        100% 0,
+        100% 87%,
+        93% 100%,
+        0 100%,
+        0% 60%,
+        0 13%
+      );
+      clip-path: polygon(
+        7% 0,
+        100% 0,
+        100% 87%,
+        93% 100%,
+        0 100%,
+        0% 60%,
+        0 13%
+      );
+      img {
+        -webkit-clip-path: polygon(
+          7% 0,
+          100% 0,
+          100% 87%,
+          93% 100%,
+          0 100%,
+          0% 60%,
+          0 13%
+        );
+        clip-path: polygon(
+          7% 0,
+          100% 0,
+          100% 87%,
+          93% 100%,
+          0 100%,
+          0% 60%,
+          0 13%
+        );
+        max-width: 788px;
+      }
+    }
+  }
+  @media (max-width: 1024px) {
+    &__pictures {
+      grid-template-columns: 1fr;
+      .leftCol {
+        flex-direction: row;
+        justify-content: space-between;
+        img {
+          max-width: calc(50% - 16px);
+        }
+      }
+      .rightCol {
+        img {
+          max-width: 952px;
+          width: 100%;
+        }
+      }
+    }
+  }
+  @media (max-width: 320px){
+    &__title {
+      font-size: 30px;
+    }
+    &__text{
+      font-size: 16px;
+    }
+    &__pictures {
+      grid-template-columns: 1fr;
+      .leftCol {
+        flex-direction: column;
+        justify-content: space-between;
+        img {
+          max-width: 320px;
+          width: 100%;
+        }
+      }
+      .rightCol {
+        img {
+          max-width: 320px;
+          width: 100%;
+          height: 424px;
+        }
+      }
     }
   }
 }

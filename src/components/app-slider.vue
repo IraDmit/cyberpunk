@@ -64,15 +64,17 @@ h2 {
   .slider {
     width: 100%;
     height: 100%;
-    .slick-list {
-      height: 100%;
+    &::v-deep {
+      .slick-list {
+        height: 100vh;
+      }
     }
     .slick-track {
       height: 100vh;
     }
     .slide {
       img {
-        max-width: 100%;
+        // max-width: 100%;
       }
     }
   }

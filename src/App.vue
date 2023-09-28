@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <the-header />
-    <app-slider />
+    <!-- <app-slider /> -->
     <app-introduce />
     <app-cta />
     <app-advertisement />
@@ -15,13 +15,13 @@ import AppAdvertisement from "./components/app-advertisement.vue";
 import AppBuy from "./components/app-buy.vue";
 import AppCta from "./components/app-cta.vue";
 import AppIntroduce from "./components/app-introduce.vue";
-import AppSlider from "./components/app-slider.vue";
+// import AppSlider from "./components/app-slider.vue";
 import TheFooter from "./navigation/the-footer.vue";
 import theHeader from "./navigation/the-header.vue";
 export default {
   components: {
     theHeader,
-    AppSlider,
+    // AppSlider,
     AppIntroduce,
     AppCta,
     AppAdvertisement,

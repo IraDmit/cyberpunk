@@ -1,21 +1,27 @@
 <template>
   <div class="cta">
     <div class="container">
-      <div class="cta__title">
-        <div class="cta__title__logoSale">
-          <img src="../assets/images/sale.svg" alt="sale" />
-          <span>акция</span>
+      <div class="first-row">
+        <div class="cta__title">
+          <img
+            src="../assets/images/Group215sale.png"
+            alt="sale"
+            class="cta__title__logoSale"
+          />
+
+          <h2 class="cta__title__text">Играй и выигрывай!</h2>
         </div>
-        <h2 class="cta__title__text">Играй и выигрывай!</h2>
+        <div class="cta__text">
+          Играй в <span> Cyberpunk 2077</span> и получи возможность выиграть
+          консоль <span> Xbox Series X</span> или
+          <span> Sony PlayStation 5!</span> Заполни форму ниже и приложи
+          скриншот о покупке игры. Итоги розыгрыша будут подведены 1 февраля.
+          Удачи! ;)
+        </div>
       </div>
-      <div class="cta__text">
-        Играй в <span> Cyberpunk 2077</span> и получи возможность выиграть
-        консоль <span> Xbox Series X</span> или
-        <span> Sony PlayStation 5!</span> Заполни форму ниже и приложи скриншот
-        о покупке игры. Итоги розыгрыша будут подведены 1 февраля. Удачи! ;)
-      </div>
-      <div class="cta__main">
-        <div class="cta__main__leftCol">
+
+      <div class="cta__leftCol">
+        <div class="cta__leftCol__form">
           <input
             type="text"
             placeholder="Как тебя зовут?"
@@ -39,9 +45,19 @@
             >
           </div>
         </div>
-        <div class="cta__main__rightCol">
+      </div>
+      <div class="cta__rightCol">
+        <picture>
+          <source
+            media="(max-width: 880px)"
+            srcset="../assets/images/ps.svg"
+          />
+          <source
+            media="(max-width: 1350px)"
+            srcset="../assets/images/Group244vertical.png"
+          />
           <img src="../assets/images/ps.svg" alt="" />
-        </div>
+        </picture>
       </div>
     </div>
   </div>
@@ -63,6 +79,9 @@ export default {
   background-color: #000;
   height: 100vh;
   padding: 70px 0;
+  // display: flex;
+  gap: 32px;
+  width: 100%;
   &::after {
     position: absolute;
     content: "";
@@ -81,27 +100,20 @@ export default {
     width: 100%;
     height: 70px;
   }
+  .container {
+    display: grid;
+    grid-template-columns: 460px 788px;
+    grid-gap: 25px;
+    .first-row {
+      grid-column: 1 / span 2;
+    }
+  }
   &__title {
     gap: 32px;
     display: flex;
     margin-bottom: 39px;
     &__logoSale {
-      position: relative;
-      img {
-        width: 100%;
-      }
-      span {
-        transform: rotate(-45deg);
-        position: absolute;
-        top: 36%;
-        left: 22%;
-        color: #f8f200;
-        font-family: Archangelsk;
-        font-size: 30px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: normal;
-      }
+      max-width: 132px;
     }
     &__text {
       align-self: flex-end;
@@ -127,14 +139,13 @@ export default {
       font-weight: 700;
     }
   }
-  &__main {
-    display: flex;
-    gap: 32px;
-    &__leftCol {
-      margin-top: 98px;
+
+  &__leftCol {
+    margin-top: 66px;
+    margin-right: 32px;
+    &__form {
       display: flex;
       flex-direction: column;
-      gap: 35px;
       .custom-input {
         border: none;
         outline: none;
@@ -142,6 +153,7 @@ export default {
         background-color: unset;
         border-bottom: 1px solid #777;
         color: #fff;
+        margin-bottom: 35px;
         &::placeholder {
           color: #fff;
           font-family: Roboto;
@@ -155,6 +167,7 @@ export default {
         display: none;
       }
       .custom-input-file {
+        margin-bottom: 35px;
         border: 1px dashed #777;
         padding: 39px 130px;
         cursor: pointer;
@@ -192,6 +205,7 @@ export default {
         line-height: normal;
         max-width: 192px;
         cursor: pointer;
+        margin-bottom: 12px;
       }
       .checkbox-wrp {
         display: flex;
@@ -216,7 +230,35 @@ export default {
         }
       }
     }
-    &__rightCol {
+  }
+  &__rightCol {
+    width: 100%;
+    img {
+      max-width: 100%;
+    }
+  }
+  @media (max-width: 1350px) {
+    height: auto;
+    .container {
+      grid-template-columns: 1fr 1fr;
+      .first-row {
+        grid-column: unset;
+      }
+      .cta__rightCol {
+        grid-row: 1 / span 2;
+      }
+    }
+  }
+  @media (max-width: 880px) {
+    .container {
+      grid-template-columns: 1fr;
+      .cta__rightCol {
+        grid-row: unset;
+        order: -2;
+        img{
+          width: 100%;
+        }
+      }
     }
   }
 }

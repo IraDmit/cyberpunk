@@ -43,12 +43,15 @@ export default {};
   gap: 32px;
   background-color: #000;
   .leftCol {
+    overflow: hidden;
     img {
       height: 100%;
+      // max-width: 100%;
     }
   }
   .rightCol {
     margin-top: 70px;
+    min-width: 692px;
     .title {
       max-width: 624px;
       color: #fff;
