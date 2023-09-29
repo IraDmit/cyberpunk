@@ -147,6 +147,7 @@ h2 {
         font-size: 20px;
         width: 100%;
         justify-content: center;
+        padding: 10px 0;
       }
     }
   }
