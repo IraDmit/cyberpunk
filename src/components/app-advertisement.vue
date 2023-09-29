@@ -141,9 +141,19 @@ export default {};
           width: 90px;
         }
       }
-      .advertisement{
+      .advertisement {
         max-width: 50%;
-        
+      }
+    }
+    @media (max-width: 700px) {
+      flex-direction: column;
+      .advertisement {
+        max-width: 100%;
+      }
+    }
+    @media (max-width: 500px) {
+      .advertisement__text__title {
+        font-size: 30px;
       }
     }
   }

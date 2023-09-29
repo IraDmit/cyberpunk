@@ -70,5 +70,14 @@ header {
       }
     }
   }
+  @media (max-width: 780px) {
+    .header-wrp{
+      flex-direction: column;
+      align-items: center;
+    }
+    .header-logos{
+      margin-left: 0;
+    }
+  }
 }
 </style>

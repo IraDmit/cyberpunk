@@ -75,6 +75,9 @@ h2 {
     .slide {
       img {
         // max-width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        object-position: center;
       }
     }
   }
@@ -127,6 +130,23 @@ h2 {
         font-weight: 700;
         line-height: 40px;
         margin-top: 25px;
+      }
+    }
+  }
+  @media (max-width: 623px){
+    .container .more-info {
+      transform: translateY(50%);
+    }
+  }
+  @media (max-width: 500px) {
+    .container .more-info {
+      &__title {
+        font-size: 30px;
+      }
+      &__btn{
+        font-size: 20px;
+        width: 100%;
+        justify-content: center;
       }
     }
   }

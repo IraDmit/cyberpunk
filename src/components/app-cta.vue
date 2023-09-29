@@ -48,10 +48,7 @@
       </div>
       <div class="cta__rightCol">
         <picture>
-          <source
-            media="(max-width: 880px)"
-            srcset="../assets/images/ps.svg"
-          />
+          <source media="(max-width: 880px)" srcset="../assets/images/ps.svg" />
           <source
             media="(max-width: 1350px)"
             srcset="../assets/images/Group244vertical.png"
@@ -252,13 +249,36 @@ export default {
   @media (max-width: 880px) {
     .container {
       grid-template-columns: 1fr;
+      .cta__leftCol {
+        margin-right: 0;
+      }
       .cta__rightCol {
         grid-row: unset;
         order: -2;
-        img{
+        img {
           width: 100%;
         }
       }
+    }
+  }
+  @media (max-width: 600px) {
+    .cta__leftCol__form {
+      .custom-input-file {
+        padding: 30px 0;
+      }
+    }
+    .cta__title {
+      position: relative;
+      &__logoSale {
+        position: absolute;
+        left: -9%;
+        top: -250%;
+      }
+    }
+  }
+  @media (max-width: 500px) {
+    .cta__title__text {
+      font-size: 30px;
     }
   }
 }

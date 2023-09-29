@@ -6,8 +6,9 @@
           <img
             src="../assets/images/Cyberpunk_2077_logo 1.svg"
             alt="main logo"
+            class="mainLogo"
           />
-          <img src="../assets/images/SDPR.svg" alt="SDPR" />
+          <img src="../assets/images/SDPR.svg" alt="SDPR" class="SDPR" />
         </div>
         <div class="text">
           <span>Лицензия</span>
@@ -39,6 +40,13 @@ export default {};
       gap: 32px;
       cursor: pointer;
     }
+    .text {
+      font-family: Roboto;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
   }
 }
 .second-row {
@@ -51,5 +59,35 @@ export default {};
   font-weight: 400;
   line-height: normal;
   padding: 13px 0;
+}
+@media (max-width: 860px) {
+  .first-row {
+    flex-direction: column;
+    .container {
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+    }
+    .logos {
+      flex-direction: column;
+      padding: 40px 15px 25px 15px;
+      .mainLogo {
+        width: 200px;
+        height: 50px;
+      }
+      .CDPR {
+        width: 116.25px;
+        height: 50px;
+      }
+    }
+    .text {
+      width: 100%;
+      background-color: #e6e6e6;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 25px 15px;
+    }
+  }
 }
 </style>

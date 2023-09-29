@@ -98,5 +98,24 @@ export default {};
       grid-column-gap: 80px;
     }
   }
+  @media (max-width: 860px) {
+    flex-direction: column;
+    .leftCol img {
+      object-fit: cover;
+
+      max-height: 300px;
+      width: 100%;
+    }
+    .rightCol {
+      margin-top: 0;
+      padding: 70px 15px;
+      min-width: unset;
+    }
+  }
+  @media (max-width: 370px) {
+   .rightCol .list-logos{
+      grid-column-gap: 40px;
+    }
+  }
 }
 </style>
