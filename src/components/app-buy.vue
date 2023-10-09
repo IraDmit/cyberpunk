@@ -4,26 +4,56 @@
       <img src="../assets/images/disk.jpg" alt="disks" />
     </div>
     <div class="rightCol">
-      <h2 class="title">Купить игру Cyberpunk 2077</h2>
-      <div class="title-list">В комплект входит:</div>
+      <h2 class="title wow fadeInRightBig" data-wow-duration="2s">
+        Купить игру Cyberpunk 2077
+      </h2>
+      <div
+        class="title-list wow fadeInRightBig"
+        data-wow-duration="2s"
+        data-wow-delay="0.5s"
+      >
+        В комплект входит:
+      </div>
       <div class="list">
-        <div class="item">
+        <div
+          class="item wow fadeInRightBig"
+          data-wow-duration="2s"
+          data-wow-delay="0.8s"
+        >
           <img src="../assets/images/disk-icon.svg" alt="icon" />
           <div class="text">Футляр с игровыми дисками</div>
         </div>
-        <div class="item">
+        <div
+          class="item wow fadeInRightBig"
+          data-wow-duration="2s"
+          data-wow-delay="1.3s"
+        >
           <img src="../assets/images/text.svg" alt="icon" />
           <div class="text">
             Футляр с кодом для загрузки игры и дисками (pc)
           </div>
         </div>
-        <div class="item">
+        <div
+          class="item wow fadeInRightBig"
+          data-wow-duration="2s"
+          data-wow-delay="1.9s"
+        >
           <img src="../assets/images/collections.svg" alt="icon" />
           <div class="text">Справочник с информацией об игровом мире</div>
         </div>
       </div>
-      <div class="title-list">Выберите платформу:</div>
-      <div class="list-logos">
+      <div
+        class="title-list wow fadeInRightBig"
+        data-wow-duration="2s"
+        data-wow-delay="2.3s"
+      >
+        Выберите платформу:
+      </div>
+      <div
+        class="list-logos wow fadeInRightBig"
+        data-wow-duration="2s"
+        data-wow-delay="2.3s"
+      >
         <img src="../assets/images/pc.svg" alt="icon" />
         <img src="../assets/images/xbox.svg" alt="icon" />
         <img src="../assets/images/stadioa.svg" alt="icon" />
@@ -46,7 +76,7 @@ export default {};
     overflow: hidden;
     img {
       height: 100%;
-      // max-width: 100%;
+      max-width: unset;
     }
   }
   .rightCol {
@@ -113,7 +143,7 @@ export default {};
     }
   }
   @media (max-width: 370px) {
-   .rightCol .list-logos{
+    .rightCol .list-logos {
       grid-column-gap: 40px;
     }
   }

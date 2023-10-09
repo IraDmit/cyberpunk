@@ -2,7 +2,7 @@
   <div class="cta">
     <div class="container">
       <div class="first-row">
-        <div class="cta__title">
+        <div class="cta__title wow slideInDown" data-wow-duration="2s">
           <img
             src="../assets/images/Group215sale.png"
             alt="sale"
@@ -11,7 +11,7 @@
 
           <h2 class="cta__title__text">Играй и выигрывай!</h2>
         </div>
-        <div class="cta__text">
+        <div class="cta__text wow slideInDown" data-wow-duration="2.5s">
           Играй в <span> Cyberpunk 2077</span> и получи возможность выиграть
           консоль <span> Xbox Series X</span> или
           <span> Sony PlayStation 5!</span> Заполни форму ниже и приложи
@@ -46,7 +46,7 @@
           </div>
         </div>
       </div>
-      <div class="cta__rightCol">
+      <div class="cta__rightCol wow fadeIn" data-wow-duration="3s">
         <picture>
           <source media="(max-width: 880px)" srcset="../assets/images/ps.svg" />
           <source
@@ -166,7 +166,8 @@ export default {
       .custom-input-file {
         margin-bottom: 35px;
         border: 1px dashed #777;
-        padding: 39px 130px;
+        padding: 39px 10px;
+        width: 100%;
         cursor: pointer;
         display: flex;
         flex-direction: column;

@@ -5,6 +5,7 @@ import store from "./store";
 
 //style
 import "./assets/scss/global.scss";
+import 'animate.css';
 
 Vue.config.productionTip = false;
 

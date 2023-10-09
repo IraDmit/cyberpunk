@@ -5,39 +5,54 @@
         <img
           src="../assets/images/monitor.png"
           alt="monitor"
-          class="imgMonitor"
+          class="imgMonitor wow fadeInLeftBig"
+          data-wow-duration="1.5s"
         />
         <div class="logos">
-          <img src="../assets/images/hp-logo.svg" alt="logo" class="hp" />
-          <img src="../assets/images/x-logo.svg" alt="logo" class="x" />
+          <img
+            src="../assets/images/hp-logo.svg"
+            alt="logo"
+            class="hp wow fadeInLeftBig"
+            data-wow-duration="1.5s"
+            data-wow-delay="1s"
+          />
+          <img
+            src="../assets/images/x-logo.svg"
+            alt="logo"
+            class="x wow fadeInLeftBig"
+            data-wow-duration="1.5s"
+            data-wow-delay="0.7s"
+          />
           <img
             src="../assets/images/Cyberpunk_2077_logo 1.svg"
             alt="logo"
-            class="mainLogo"
+            class="mainLogo wow fadeInLeftBig"
+            data-wow-duration="1.5s"
+            data-wow-delay="0.5s"
           />
         </div>
       </div>
       <div class="advertisement">
         <div class="advertisement__text">
-          <h2 class="advertisement__text__title">
+          <h2 class="advertisement__text__title wow fadeInRightBig">
             Полное погружение вместе с HP
           </h2>
-          <div class="advertisement__text__mainInfo">
+          <div class="advertisement__text__mainInfo wow fadeInRightBig" data-wow-delay="0.5s">
             Погрузись в современные экшен-игры с реалистичным изображением с
             помощью монитора с диагональю 23,8 дюйма, созданном для отображения
             максимально насыщенных цветов. Успевай реагировать на любые события
             с временем отклика 1 мс и частотой в 144 Гц!
           </div>
           <div class="advertisement__text__list">
-            <div class="item">
+            <div class="item wow fadeInRightBig" data-wow-delay="1s">
               <img src="../assets/images/color.svg" alt="icon" />
               <div class="text">Яркие насыщенные цвета</div>
             </div>
-            <div class="item">
+            <div class="item wow fadeInRightBig" data-wow-delay="1.3s">
               <img src="../assets/images/awasome.svg" alt="icon" />
               <div class="text">Кристальная четкость изображения</div>
             </div>
-            <div class="item">
+            <div class="item wow fadeInRightBig" data-wow-delay="1.6s">
               <img src="../assets/images/motion.svg" alt="icon" />
               <div class="text">Быстрые движения и плавный геймплей</div>
             </div>
@@ -54,6 +69,9 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
+.wow {
+  visibility: hidden;
+}
 .section {
   background-color: #f8f200;
   .container {
@@ -65,6 +83,7 @@ export default {};
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      width: calc(50% - 32px);
       .imgMonitor {
         max-width: 100%;
       }
@@ -72,9 +91,13 @@ export default {};
         display: flex;
         gap: 25px;
         margin-top: 26px;
+        img {
+          height: unset;
+        }
       }
     }
     .advertisement {
+      width: calc(50% - 32px);
       &__text {
         &__title {
           color: #000;
@@ -126,7 +149,7 @@ export default {};
         }
       }
     }
-    @media (max-width: 1024px) {
+    @media (max-width: 1124px) {
       .leftCol .logos {
         flex-direction: column;
         align-items: center;

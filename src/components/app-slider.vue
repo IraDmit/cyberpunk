@@ -74,10 +74,10 @@ h2 {
     }
     .slide {
       img {
-        // max-width: 100%;
         height: 100vh;
         object-fit: cover;
         object-position: center;
+        width: 100%;
       }
     }
   }

@@ -1,8 +1,8 @@
 <template>
   <div class="container">
     <div class="introduce">
-      <h2 class="introduce__title">Найт-Сити изменит тебя навсегда!</h2>
-      <div class="introduce__text">
+      <h2 class="introduce__title wow fadeInDown" data-wow-duration="2s">Найт-Сити изменит тебя навсегда!</h2>
+      <div class="introduce__text wow fadeInDown" data-wow-duration="2.5s">
         <span> Cyberpunk 2077 </span>— приключенческая ролевая игра, действие
         которой происходит в мегаполисе Найт-Сити, где власть, роскошь и
         модификации тела ценятся выше всего. Ты играешь за V, наёмника в поисках
@@ -15,19 +15,22 @@
           <img
             src="../assets/images/pic-3.png"
             alt="picture"
-            class="introduce__pictures__item"
+            class="introduce__pictures__item wow slideInLeft"
+            data-wow-duration="2s"
           />
           <img
             src="../assets/images/pic-2.png"
             alt="picture"
-            class="introduce__pictures__item"
+            class="introduce__pictures__item wow slideInLeft"
+            data-wow-duration="2s"
           />
         </div>
         <div class="rightCol">
           <img
             src="../assets/images/pic-1.png"
             alt="picture"
-            class="introduce__pictures__item"
+            class="introduce__pictures__item wow fadeInRightBig"
+            data-wow-duration="2s"
           />
         </div>
       </div>
@@ -71,7 +74,7 @@ export default {};
     grid-template-columns: 1fr 2fr;
     gap: 32px;
     // height: 788px;
-    overflow: hidden;
+    // overflow: hidden;
     .leftCol {
       display: flex;
       flex-direction: column;
@@ -192,8 +195,6 @@ export default {};
     &__title {
       font-size: 30px;
     }
-
-    
   }
 }
 </style>
