@@ -8,6 +8,7 @@ import "./assets/scss/global.scss";
 import 'animate.css';
 
 Vue.config.productionTip = false;
+Vue.config.devtools = true;
 
 new Vue({
   router,
